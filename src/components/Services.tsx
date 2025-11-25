@@ -26,24 +26,27 @@ const Services = () => {
   ];
 
   return (
-    <section className="container mx-auto px-6 py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-foreground">
+    <section className="container mx-auto px-6 py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 relative">
+        <div className="animate-fade-in">
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight text-foreground">
             We Always Provide The Best Service
           </h2>
         </div>
-        <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-foreground">Services</h3>
-          <p className="text-muted-foreground leading-relaxed">
+        <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <h3 className="text-3xl font-bold text-foreground">Services</h3>
+          <p className="text-xl text-muted-foreground leading-relaxed">
             Choose from our wide variety of effective, affordable, high-quality cleaning services.
           </p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
         {services.map((service, index) => (
-          <ServiceCard key={index} {...service} />
+          <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            <ServiceCard {...service} />
+          </div>
         ))}
       </div>
     </section>
