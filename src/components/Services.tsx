@@ -2,6 +2,13 @@ import ServiceCard from "./ServiceCard";
 import cleaningTeam from "@/assets/cleaning-team.jpg";
 import securityTech from "@/assets/security-tech.jpg";
 import electrician from "@/assets/electrician.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Services = () => {
   const services = [
@@ -42,13 +49,25 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-        {services.map((service, index) => (
-          <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-            <ServiceCard {...service} />
-          </div>
-        ))}
-      </div>
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full max-w-7xl mx-auto relative"
+      >
+        <CarouselContent className="-ml-2 md:-ml-4">
+          {services.map((service, index) => (
+            <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <div className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <ServiceCard {...service} />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden md:flex -left-12 bg-primary text-primary-foreground hover:bg-primary/90" />
+        <CarouselNext className="hidden md:flex -right-12 bg-primary text-primary-foreground hover:bg-primary/90" />
+      </Carousel>
     </section>
   );
 };
