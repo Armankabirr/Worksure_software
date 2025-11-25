@@ -2,6 +2,7 @@ import ServiceCard from "./ServiceCard";
 import cleaningTeam from "@/assets/cleaning-team.jpg";
 import securityTech from "@/assets/security-tech.jpg";
 import electrician from "@/assets/electrician.jpg";
+import babysitter from "@/assets/babysitter.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -29,6 +30,12 @@ const Services = () => {
       title: "Electrician",
       description: "From minor repairs to complete rewiring, our certified electricians provide safe and effective electrical solutions for your property.",
       alt: "Professional electrician working on electrical panel"
+    },
+    {
+      image: babysitter,
+      title: "Babysitter",
+      description: "Trusted and experienced babysitters who provide loving care for your children. Background-checked professionals ensuring your peace of mind.",
+      alt: "Professional babysitter caring for children"
     }
   ];
 
