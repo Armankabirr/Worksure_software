@@ -10,10 +10,10 @@ const Header = () => {
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
-          <a href="#service" className="text-foreground hover:text-primary transition-colors">Service</a>
-          <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
-          <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+          <a href="#home" className="text-foreground hover:text-primary transition-colors scroll-smooth">Home</a>
+          <a href="#service" className="text-foreground hover:text-primary transition-colors scroll-smooth">Service</a>
+          <a href="#about" className="text-foreground hover:text-primary transition-colors scroll-smooth">About</a>
+          <a href="#contact" className="text-foreground hover:text-primary transition-colors scroll-smooth">Contact</a>
         </nav>
 
         <div className="flex items-center space-x-4">
