@@ -1,5 +1,6 @@
 import { ShoppingCart, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -76,9 +77,11 @@ const Header = () => {
           <Button variant="ghost" size="icon" className="hover:bg-accent">
             <ShoppingCart className="h-5 w-5" />
           </Button>
-          <Button variant="default" size="icon" className="bg-primary hover:bg-primary/90">
-            <User className="h-5 w-5" />
-          </Button>
+          <Link to="/signup">
+            <Button variant="default" size="icon" className="bg-primary hover:bg-primary/90">
+              <User className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
